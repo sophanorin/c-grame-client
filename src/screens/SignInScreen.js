@@ -6,7 +6,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
@@ -15,6 +14,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { signin } from "../actions/userActions";
 import { Alert, AlertTitle } from "@material-ui/lab";
 import Loading from "../components/Loading";
+import { Link } from "react-router-dom";
 
 function Copyright() {
   return (
@@ -150,12 +150,12 @@ function SignIn(props) {
                 </Button>
                 <Grid container>
                   <Grid item xs>
-                    <Link href="/reset" variant="body2">
+                    <Link to="/reset" variant="body2">
                       Forgot password?
                     </Link>
                   </Grid>
                   <Grid item>
-                    <Link href="/signup" variant="body2">
+                    <Link to="/signup" variant="body2">
                       {"Don't have an account? Sign Up"}
                     </Link>
                   </Grid>
