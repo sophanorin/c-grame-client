@@ -1,6 +1,7 @@
 {
   "name": "client",
   "proxy": "https://newfeed221.herokuapp.com/",
+  "homepage": "./",
   "version": "0.1.0",
   "type": "module",
   "private": true,
