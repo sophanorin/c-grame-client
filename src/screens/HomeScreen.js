@@ -5,6 +5,8 @@ import { getallpost } from "../actions/postActions.js";
 import Card from "../components/Card.js";
 import Loading from "../components/Loading.js";
 import TopBar from "../components/TopBar.js";
+import LazyLoad from "react-lazyload";
+
 function HomeScreen(props) {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -27,11 +29,18 @@ function HomeScreen(props) {
     <>
       <TopBar />
       {posts && (
-        <Grid container direction="column" justify="center" alignItems="center">
-          {posts.map((post) => (
-            <Card key={post._id} {...post} />
-          ))}
-        </Grid>
+        <LazyLoad height={200}>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+          >
+            {posts.map((post) => (
+              <Card key={post._id} {...post} />
+            ))}
+          </Grid>
+        </LazyLoad>
       )}
     </>
   );

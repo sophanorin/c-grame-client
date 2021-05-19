@@ -83,7 +83,7 @@ export default function SignUp(props) {
           <div className={classes.paper}>
             <Avatar
               className={classes.avatar}
-              src="https://parentzone.org.uk/sites/default/files/Instagram%20logo.jpg"
+              src="https://cdn.dribbble.com/users/25514/screenshots/14753723/coinread_logo_animation.png?compress=1&resize=400x300"
             ></Avatar>
             <Typography component="h1" variant="h5">
               Sign up
